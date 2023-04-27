@@ -7,16 +7,39 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
 
-  <div id="container">
-    <h3>Projeto com Bootstrap e Ionic!</h3>
-    <hr>
-    <p>Componentes Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components"> - UI Components</a></p>
-    <p>Componentes Bootstrap <a target="_blank" rel="noopener noreferrer" href="https://getbootstrap.com/docs/5.3/components/buttons/"> - UI Components</a></p>
-  </div>
+  <!-- Menu de Cursos -->
+  <ion-row>
+    <ion-col size="12">
+      <ion-segment value="default">
+        <ion-segment-button value="desenvolvimento_sistemas">
+          <ion-label>Desenvolvimento de Sistemas</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="informatica_internet">
+          <ion-label>Informática para Internet</ion-label>
+        </ion-segment-button>
+        <ion-segment-button value="quimica">
+          <ion-label>Química</ion-label>
+        </ion-segment-button>
+      </ion-segment>
+    </ion-col>
+  </ion-row>
+
+  <!-- Card de Desenvolvimento de Sistemas -->
+
+  <ion-row>
+    <ion-col size="4">
+      <ion-card>
+        <img alt="Silhouette of mountains" src="https://images.pexels.com/photos/5473298/pexels-photo-5473298.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" />
+        <ion-card-header>
+          <ion-card-title>Card Title</ion-card-title>
+          <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>
+          Here's a small text description for the card content. Nothing more, nothing less.
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+
 </ion-content>
