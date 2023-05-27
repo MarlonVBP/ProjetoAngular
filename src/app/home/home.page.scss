@@ -1,45 +1,32 @@
-:root{
+:root
+{
   --ion-color-secondary-tint: #50c8ff;
 }
-
-#container {
-  text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
-}
-
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
-}
-
-#container a {
-  text-decoration: none;
-}
-.plano-fundo{
-  background-image: url(https://images.pexels.com/photos/12211017/pexels-photo-12211017.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
-  background-repeat: no-repeat;
+.img
+{
+  background-color: #0366b6;
+  background: url('https://images.pexels.com/photos/7276788/pexels-photo-7276788.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1') no-repeat center;
   background-size: cover;
 }
-
-.altura{
+.altura_max
+{
   height: 100vh;
   overflow: hidden;
 }
-
-.form{
+.form
+{
   margin: auto;
+}
+.button_class
+{
+  --border-radius: 15px;
+  transition: .7s linear all;
+}
+.button_class:hover
+{
+  transform: scale(1.05);
+}
+h1
+{
+  font-size: 4em;
 }
