@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 @Component({
@@ -7,16 +8,16 @@ import { IonicModule } from '@ionic/angular';
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
   standalone: true,
-  imports: [IonicModule, CommonModule],
+  imports: [IonicModule, CommonModule, RouterLink],
 })
 export class HomePage {
   perfil = {
-    nome: 'Carlitos', 
-    profissao: 'Professor', 
-    mencao: '@carlitos', 
-    biografia: 'Professor e gestor de projeots', 
-    cidade: 'Tatuí', 
-    estado: 'São Paulo', 
+    nome: 'Carlitos',
+    profissao: 'Professor',
+    mencao: '@carlitos',
+    biografia: 'Professor e gestor de projeots',
+    cidade: 'Tatuí',
+    estado: 'São Paulo',
     idioma: 'Português',
     conta_criada_em: 'Janeiro 2020',
     foto_perfil: 'https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
@@ -24,7 +25,7 @@ export class HomePage {
 
   metricas_sociais = {
     curtidas: '41.8K',
-    seguidores: '853',
+    seguidores: 853,
     amigos: '250'
   }
 
@@ -189,43 +190,57 @@ export class HomePage {
         mencao_perfil: '@gabriel',
         foto: 'https://images.pexels.com/photos/7585838/pexels-photo-7585838.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
       },
-        postagem: {
-          mensagem: 'Qual é a melhor forma de se preparar para uma entrevista de emprego?',
-          foto: null
-        }
+      postagem: {
+        mensagem: 'Qual é a melhor forma de se preparar para uma entrevista de emprego?',
+        foto: null
+      }
+    },
+    {
+      perfil: {
+        nome: 'Laura',
+        mencao_perfil: '@laura',
+        foto: 'https://images.pexels.com/photos/6695787/pexels-photo-6695787.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
       },
-      {
-        perfil: {
-          nome: 'Laura',
-          mencao_perfil: '@laura',
-          foto: 'https://images.pexels.com/photos/6695787/pexels-photo-6695787.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
-        },
-        postagem: {
-          mensagem: 'Você já ouviu falar da técnica Pomodoro?',
-          foto: 'https://images.pexels.com/photos/1181377/pexels-photo-1181377.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
-        }
+      postagem: {
+        mensagem: 'Você já ouviu falar da técnica Pomodoro?',
+        foto: 'https://images.pexels.com/photos/1181377/pexels-photo-1181377.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+      }
+    },
+    {
+      perfil: {
+        nome: 'Felipe',
+        mencao_perfil: '@felipe',
+        foto: 'https://images.pexels.com/photos/3991820/pexels-photo-3991820.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
       },
-      {
-        perfil: {
-          nome: 'Felipe',
-          mencao_perfil: '@felipe',
-          foto: 'https://images.pexels.com/photos/3991820/pexels-photo-3991820.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
-        },
-        postagem: {
-          mensagem: 'O que é mais importante na vida?',
-          foto: null
-        }
+      postagem: {
+        mensagem: 'O que é mais importante na vida?',
+        foto: null
+      }
+    },
+    {
+      perfil: {
+        nome: 'Julia',
+        mencao_perfil: '@julia',
+        foto: 'https://images.pexels.com/photos/4722061/pexels-photo-4722061.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
       },
-      {
-        perfil: {
-          nome: 'Julia',
-          mencao_perfil: '@julia',
-          foto: 'https://images.pexels.com/photos/4722061/pexels-photo-4722061.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
-        },
-        postagem: {
-          mensagem: 'Como manter uma rotina de estudos eficiente?',
-          foto: 'https://images.pexels.com/photos/5792692/pexels-photo-5792692.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
-        }
-      }    
+      postagem: {
+        mensagem: 'Como manter uma rotina de estudos eficiente?',
+        foto: 'https://images.pexels.com/photos/5792692/pexels-photo-5792692.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'
+      }
+    }
   ]
+
+  seguir_status: string = 'Seguir';
+
+  setSeguir() {
+    if (this.seguir_status == 'Seguir') {
+      this.seguir_status = 'Seguindo';
+      this.metricas_sociais.seguidores += 1;
+
+    } else {
+        this.seguir_status = 'Seguir';
+        this.metricas_sociais.seguidores -= 1;
+    }
+  }
+
 }
