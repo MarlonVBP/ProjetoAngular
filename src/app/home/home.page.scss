@@ -1,27 +1,45 @@
-#container {
-  text-align: center;
-
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  transform: translateY(-50%);
+*{
+  color: white;
 }
 
-#container strong {
-  font-size: 20px;
-  line-height: 26px;
+.colNumero{
+ height: 20vh;
+ width: 100%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ flex-direction: column;
 }
 
-#container p {
-  font-size: 16px;
-  line-height: 22px;
-
-  color: #8c8c8c;
-
-  margin: 0;
+.tecla_igual{
+ background: rgb(231, 122, 141);
 }
 
-#container a {
-  text-decoration: none;
+.row_container{
+  align-items: center;
+  justify-content: center;
 }
+
+.col_container{
+  background: rgb(233, 106, 106);
+  border-radius: 30px;
+}
+
+.somaNumero{
+  font-size: 1.5em;
+}
+.resultado{
+  font-size: 3em;
+}
+
+.dark{
+  --background: white;
+  --color:black;
+}
+
+ion-button{
+  --border-radius: 50%;
+  --box-shadow: 4px 10px 10px rgba(194, 99, 99, 0.61);
+  --background:rgb(250, 136, 136);
+}
+
