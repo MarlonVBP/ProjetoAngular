@@ -13,10 +13,10 @@
       <ion-row class="ion-justify-content-center">
         <ion-col class="ion-text-center colNumero">
           <ion-row class="ion-justify-content-center">
-            <ion-col><ion-text class="somaNumero">2+50+43</ion-text></ion-col>
+            <ion-col><ion-text class="somaNumero">{{this.input}}</ion-text></ion-col>
           </ion-row>
           <ion-row class="ion-justify-content-center">
-            <ion-col><ion-text class="resultado">95</ion-text></ion-col>
+            <ion-col><ion-text class="resultado">{{this.resultado}}</ion-text></ion-col>
           </ion-row>
         </ion-col>
       </ion-row>
@@ -26,38 +26,38 @@
       <ion-row class="ion-justify-content-center">
         <ion-col size="12" class="ion-text-center">
             <ion-row class="ion-justify-content-center">
-              <ion-col class="ion-text-center " size="3"><ion-button size="large">()</ion-button></ion-col>
-              <ion-col class="ion-text-center " size="3"><ion-button size="large">+/-</ion-button></ion-col>
-              <ion-col class="ion-text-center " size="3"><ion-button size="large">%</ion-button></ion-col>
-              <ion-col class="ion-text-center " size="3"><ion-button size="large" class="dark"><ion-icon name="backspace-outline" class="dark"></ion-icon></ion-button></ion-col>
+              <ion-col class="ion-text-center " size="3"><ion-button size="large" (click)="ButtonOperator('()')">()</ion-button></ion-col>
+              <ion-col class="ion-text-center " size="3"><ion-button size="large" (click)="ButtonOperator('()')">+/-</ion-button></ion-col>
+              <ion-col class="ion-text-center " size="3"><ion-button size="large" (click)="ButtonOperator('%')">%</ion-button></ion-col>
+              <ion-col class="ion-text-center " size="3"><ion-button size="large" (click)="ButtonOperator('')" class="dark"><ion-icon name="backspace-outline" class="dark"></ion-icon></ion-button></ion-col>
             </ion-row>
 
           <ion-row class="ion-justify-content-center">
-            <ion-col class="ion-text-center " size="3"><ion-button size="large">7</ion-button></ion-col>
-            <ion-col class="ion-text-center " size="3"><ion-button size="large">8</ion-button></ion-col>
-            <ion-col class="ion-text-center " size="3"><ion-button size="large">9</ion-button></ion-col>
-            <ion-col class="ion-text-center " size="3"><ion-button size="large">*</ion-button></ion-col>
+            <ion-col class="ion-text-center " size="3"><ion-button size="large" (click)="ButtonNum('7')">7</ion-button></ion-col>
+            <ion-col class="ion-text-center " size="3"><ion-button size="large" (click)="ButtonNum('8')">8</ion-button></ion-col>
+            <ion-col class="ion-text-center " size="3"><ion-button size="large" (click)="ButtonNum('7')">9</ion-button></ion-col>
+            <ion-col class="ion-text-center " size="3"><ion-button size="large" (click)="ButtonOperator('*')">*</ion-button></ion-col>
           </ion-row>
 
           <ion-row class="ion-justify-content-center">
-            <ion-col class="ion-text-center" size="3"><ion-button size="large">4</ion-button></ion-col>
-            <ion-col class="ion-text-center" size="3"><ion-button size="large">5</ion-button></ion-col>
-            <ion-col class="ion-text-center" size="3"><ion-button size="large">6</ion-button></ion-col>
-            <ion-col class="ion-text-center" size="3"><ion-button size="large">-</ion-button></ion-col>
+            <ion-col class="ion-text-center" size="3"><ion-button size="large" (click)="ButtonNum('4')">4</ion-button></ion-col>
+            <ion-col class="ion-text-center" size="3"><ion-button size="large" (click)="ButtonNum('5')">5</ion-button></ion-col>
+            <ion-col class="ion-text-center" size="3"><ion-button size="large" (click)="ButtonNum('6')">6</ion-button></ion-col>
+            <ion-col class="ion-text-center" size="3"><ion-button size="large" (click)="ButtonOperator('-')">-</ion-button></ion-col>
           </ion-row>
 
           <ion-row class="ion-justify-content-center">
-            <ion-col class="ion-text-center" size="3"><ion-button size="large">1</ion-button></ion-col>
-            <ion-col class="ion-text-center" size="3"><ion-button size="large">2</ion-button></ion-col>
-            <ion-col class="ion-text-center" size="3"><ion-button size="large">3</ion-button></ion-col>
-            <ion-col class="ion-text-center" size="3"><ion-button size="large">+</ion-button></ion-col>
+            <ion-col class="ion-text-center" size="3"><ion-button size="large" (click)="ButtonNum('1')">1</ion-button></ion-col>
+            <ion-col class="ion-text-center" size="3"><ion-button size="large" (click)="ButtonNum('2')">2</ion-button></ion-col>
+            <ion-col class="ion-text-center" size="3"><ion-button size="large" (click)="ButtonNum('3')">3</ion-button></ion-col>
+            <ion-col class="ion-text-center" size="3"><ion-button size="large" (click)="ButtonOperator('+')">+</ion-button></ion-col>
           </ion-row>
 
           <ion-row class="ion-justify-content-center">
-            <ion-col class="ion-text-center " size="3"><ion-button size="large">0</ion-button></ion-col>
-            <ion-col class="ion-text-center " size="3"><ion-button size="large">.</ion-button></ion-col>
-            <ion-col class="ion-text-center " size="3"><ion-button size="large">/</ion-button></ion-col>
-            <ion-col class="ion-text-center " size="3"><ion-button size="large" class="dark">=</ion-button></ion-col>
+            <ion-col class="ion-text-center " size="3"><ion-button size="large" (click)="ButtonNum('0')">0</ion-button></ion-col>
+            <ion-col class="ion-text-center " size="3"><ion-button size="large" (click)="ButtonOperator('.')">.</ion-button></ion-col>
+            <ion-col class="ion-text-center " size="3"><ion-button size="large" (click)="ButtonOperator('/')">/</ion-button></ion-col>
+            <ion-col class="ion-text-center " size="3"><ion-button size="large" (click)="ButtonEqual(this.input)" class="dark">=</ion-button></ion-col>
           </ion-row>
         </ion-col>
       </ion-row>
