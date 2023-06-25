@@ -13,7 +13,7 @@
       <ion-row class="ion-justify-content-center">
         <ion-col class="ion-text-center colNumero">
           <ion-row class="ion-justify-content-center">
-            <ion-col><ion-text class="somaNumero">{{this.input}}</ion-text></ion-col>
+            <ion-col><ion-text class="somaNumero">{{this.input}}{{this.input_atual}}</ion-text></ion-col>
           </ion-row>
           <ion-row class="ion-justify-content-center">
             <ion-col><ion-text class="resultado">{{this.resultado}}</ion-text></ion-col>
@@ -35,7 +35,7 @@
           <ion-row class="ion-justify-content-center">
             <ion-col class="ion-text-center " size="3"><ion-button size="large" (click)="ButtonNum('7')">7</ion-button></ion-col>
             <ion-col class="ion-text-center " size="3"><ion-button size="large" (click)="ButtonNum('8')">8</ion-button></ion-col>
-            <ion-col class="ion-text-center " size="3"><ion-button size="large" (click)="ButtonNum('7')">9</ion-button></ion-col>
+            <ion-col class="ion-text-center " size="3"><ion-button size="large" (click)="ButtonNum('9')">9</ion-button></ion-col>
             <ion-col class="ion-text-center " size="3"><ion-button size="large" (click)="ButtonOperator('*')">*</ion-button></ion-col>
           </ion-row>
 
@@ -57,7 +57,7 @@
             <ion-col class="ion-text-center " size="3"><ion-button size="large" (click)="ButtonNum('0')">0</ion-button></ion-col>
             <ion-col class="ion-text-center " size="3"><ion-button size="large" (click)="ButtonNum('.')">,</ion-button></ion-col>
             <ion-col class="ion-text-center " size="3"><ion-button size="large" (click)="ButtonOperator('/')">/</ion-button></ion-col>
-            <ion-col class="ion-text-center " size="3"><ion-button size="large" (click)="ButtonEqual(this.input)" class="dark">=</ion-button></ion-col>
+            <ion-col class="ion-text-center " size="3"><ion-button size="large" (click)="ButtonEqual()" class="dark">=</ion-button></ion-col>
           </ion-row>
         </ion-col>
       </ion-row>
