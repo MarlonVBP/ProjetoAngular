@@ -60,6 +60,11 @@ export class HomePage {
 
   // Função que vai limpar o último índice do vetor
   ButtonClear() {
+    if(this.resultado.length != 0){
+    this.input_atual = this.resultado.substr(0, this.resultado.length - 1)
+    this.resultado = '';
+    return;
+    }
     this.input_atual = this.input_atual.substr(0, this.input_atual.length - 1);
   }
 
