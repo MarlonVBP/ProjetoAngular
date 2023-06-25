@@ -22,19 +22,22 @@ export class HomePage {
     if (this.resultado.length > 0) {
       this.resultado = '';
     }
+    if (this.input_atual.includes(')')) {
+      return;
+    }
     if (this.input_atual.length == 0) {
       if (num == '.' || num == '0') {
         return;
       }
     }
     if (num == '.') {
-      if (this.input_atual.includes('.') || this.input_atual.includes(')')) {
+      if (this.input_atual.includes('.')) {
         return;
       }
     }
     this.input_atual += num;
   }
-
+  
   // Função que vai receber os operadores escolhidos
   ButtonOperator(operator: string) {
     this.input += this.input_atual;
