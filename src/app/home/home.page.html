@@ -26,10 +26,10 @@
       <ion-row class="ion-justify-content-center">
         <ion-col size="12" class="ion-text-center">
             <ion-row class="ion-justify-content-center">
-              <ion-col class="ion-text-center " size="3"><ion-button size="large" (click)="ButtonOperator('()')">()</ion-button></ion-col>
-              <ion-col class="ion-text-center " size="3"><ion-button size="large" (click)="ButtonOperator('()')">+/-</ion-button></ion-col>
-              <ion-col class="ion-text-center " size="3"><ion-button size="large" (click)="ButtonOperator('%')">%</ion-button></ion-col>
-              <ion-col class="ion-text-center " size="3"><ion-button size="large" (click)="ButtonOperator('')" class="dark"><ion-icon name="backspace-outline" class="dark"></ion-icon></ion-button></ion-col>
+              <ion-col class="ion-text-center " size="3"><ion-button size="large" (click)="ButtonAllClear()">AC</ion-button></ion-col>
+              <ion-col class="ion-text-center " size="3"><ion-button size="large" (click)="ButtonReverse()">+/-</ion-button></ion-col>
+              <ion-col class="ion-text-center " size="3"><ion-button size="large" (click)="ButtonPorcentagem()">%</ion-button></ion-col>
+              <ion-col class="ion-text-center " size="3"><ion-button size="large" (click)="ButtonClear()" class="dark"><ion-icon name="backspace-outline" class="dark"></ion-icon></ion-button></ion-col>
             </ion-row>
 
           <ion-row class="ion-justify-content-center">
@@ -55,7 +55,7 @@
 
           <ion-row class="ion-justify-content-center">
             <ion-col class="ion-text-center " size="3"><ion-button size="large" (click)="ButtonNum('0')">0</ion-button></ion-col>
-            <ion-col class="ion-text-center " size="3"><ion-button size="large" (click)="ButtonOperator('.')">.</ion-button></ion-col>
+            <ion-col class="ion-text-center " size="3"><ion-button size="large" (click)="ButtonNum('.')">,</ion-button></ion-col>
             <ion-col class="ion-text-center " size="3"><ion-button size="large" (click)="ButtonOperator('/')">/</ion-button></ion-col>
             <ion-col class="ion-text-center " size="3"><ion-button size="large" (click)="ButtonEqual(this.input)" class="dark">=</ion-button></ion-col>
           </ion-row>
