@@ -107,7 +107,7 @@ export class HomePage {
     }
     if (this.resultado.length != 0) {
       let num = Number(this.resultado);
-      this.input_atual = num / 100 + '*';
+      this.input_atual = num / 100 + '';
       this.resultado = '';
     }
     this.Verificar()
