@@ -1,54 +1,88 @@
-*{
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
   color: white;
+  font-family: 'PT Serif', serif;
+  box-sizing: border-box1;
 }
 
-.colNumero{
- height: 20vh;
- width: 100%;
- display: flex;
- align-items: center;
- justify-content: center;
- flex-direction: column;
+// .scroll_input {
+//   overflow-x: scroll;
+//   max-width: 100%;
+// }
+
+.colNumero {
+  height: 20vh;
+  max-width: 100%;
+  padding: 10%;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  flex-direction: column;
 }
 
-.tecla_igual{
- background: rgb(231, 122, 141);
+.back_col {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.row_container{
+.back_cont {
+  background: white;
+  border-radius: 50%;
+  height: 5em;
+  width: 5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tecla_igual {
+  background: rgb(231, 122, 141);
+}
+
+.row_container {
   height: 100vh;
   align-items: center;
   justify-content: center;
 }
 
-.col_container{
-  background: rgb(233, 106, 106);
+.col_container {
+  background: rgb(72, 72, 72);
   border-radius: 30px;
+  overflow: hidden;
 }
 
-.somaNumero{
+.somaNumero {
   font-size: 1.5em;
 }
-.resultado{
+
+.resultado {
   font-size: 3em;
 }
 
-
-
-ion-button{
+ion-button {
   --border-radius: 50%;
-  --box-shadow: 4px 10px 10px rgba(194, 99, 99, 0.61);
-  --background:rgb(250, 136, 136);
+  --box-shadow: 4px 3px 0px rgba(38, 38, 38, 0.61);
+  --background: rgb(101, 101, 101);
   width: 80px;
   height: 80px;
   font-size: 2em;
+  cursor: pointer;
 }
 
-.dark{
+.dark {
   --background: white;
-  color:black;
+  color: black;
+  font-size: 2.5em;
+  font-weight: 300;
+  cursor: pointer;
 }
 
-.menu_icons{
+.menu_icons {
   font-size: 2.5em;
+}
+
+.inputHistory {
+  color: rgba(202, 202, 202, 0.719);
 }
